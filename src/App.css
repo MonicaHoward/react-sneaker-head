@@ -8,3 +8,8 @@
 .logo {
   font-family: "Architects Daughter", cursive;
 }
+/* SHOES CSS */
+.shoe-card {
+  border: 1px solid gray;
+  margin: 10px;
+}

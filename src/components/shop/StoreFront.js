@@ -13,11 +13,7 @@ class StoreFront extends Component {
       { style: "Black & Green", price: 170.0 },
       { style: "Portland Classic", price: 79.0 }
     ];
-    return (
-      <div>
-        <Shoes items={inventory} />
-      </div>
-    );
+    return <Shoes items={inventory} />;
   }
 }
 

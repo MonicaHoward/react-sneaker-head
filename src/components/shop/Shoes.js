@@ -1,4 +1,6 @@
 import React, { Component } from "react";
+import { Container, Col, Row } from "reactstrap";
+
 import Shoe from "./Shoe";
 
 class Shoes extends Component {
@@ -18,19 +20,23 @@ class Shoes extends Component {
     console.log(this.props.items);
     var inventory = this.props.items.map((item, i) => {
       return (
-        <Shoe
-          name={item.style}
-          price={item.price}
-          key={i}
-          cartTotal={this.cartTotal}
-          active={item.active}
-        />
+        <Col className="shoe-card" sm="3">
+          <Shoe
+            name={item.style}
+            price={item.price}
+            key={i}
+            cartTotal={this.cartTotal}
+            active={item.active}
+          />
+        </Col>
       );
     });
     return (
       <div>
         <h1>Shoes</h1>
-        <div>{inventory}</div>
+        <Container>
+          <Row>{inventory}</Row>
+        </Container>
 
         <div>total:{this.state.total}</div>
       </div>
