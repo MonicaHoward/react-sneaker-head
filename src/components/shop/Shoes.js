@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import Shoe from "./Shoe";
 
 class Shoes extends Component {
   cartTotal(price) {
@@ -16,11 +17,22 @@ class Shoes extends Component {
   render() {
     console.log(this.props.items);
     var inventory = this.props.items.map((item, i) => {
-      return <h1>test</h1>;
+      return (
+        <Shoe
+          name={item.style}
+          price={item.price}
+          key={i}
+          cartTotal={this.cartTotal}
+          active={item.active}
+        />
+      );
     });
     return (
       <div>
         <h1>Shoes</h1>
+        <div>{inventory}</div>
+
+        <div>total:{this.state.total}</div>
       </div>
     );
   }
