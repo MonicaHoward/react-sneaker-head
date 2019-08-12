@@ -31,10 +31,12 @@ export default class MainNav extends React.Component {
     return (
       <div>
         <Navbar color="light" light expand="md">
-          <NavbarBrand href="/">SNEAKER HEADS</NavbarBrand>
+          <NavbarBrand className="logo" href="/">
+            SNEAKER HEADS
+          </NavbarBrand>
           <NavbarToggler onClick={this.toggle} />
           <Collapse isOpen={this.state.isOpen} navbar>
-            <Nav className="ml-auto" navbar>
+            <Nav className="ml-auto mini-nav" navbar>
               <NavItem>
                 <NavLink href="/components/">Components</NavLink>
               </NavItem>
