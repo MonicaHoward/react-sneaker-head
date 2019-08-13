@@ -1,5 +1,17 @@
 import React, { Component } from "react";
-import { Container, Col, Row } from "reactstrap";
+import {
+  Card,
+  Col,
+  Container,
+  Row,
+  Button,
+  CardFooter,
+  CardTitle,
+  CardText,
+  CardDeck,
+  CardSubtitle,
+  CardBody
+} from "reactstrap";
 
 import Shoe from "./Shoe";
 
@@ -21,13 +33,25 @@ class Shoes extends Component {
     var inventory = this.props.items.map((item, i) => {
       return (
         <Col className="shoe-card" sm="3">
-          <Shoe
+          <Card className="imgClass">
+            <CardBody>
+              <CardTitle>
+                <strong>{item.style}</strong>
+              </CardTitle>
+
+              {/* <CardFooter className="bg"> */}
+              <Button className="justify-content-end">Add to Cart</Button>
+              {/* </CardFooter> */}
+            </CardBody>
+          </Card>
+          {/* <Shoe
             name={item.style}
             price={item.price}
             key={i}
             cartTotal={this.cartTotal}
             active={item.active}
           />
+          <Button color="secondary">secondary</Button> */}
         </Col>
       );
     });
@@ -35,7 +59,9 @@ class Shoes extends Component {
       <div>
         <h1>Shoes</h1>
         <Container>
-          <Row>{inventory}</Row>
+          <Row>
+            <CardDeck>{inventory}</CardDeck>
+          </Row>
         </Container>
 
         <div>total:{this.state.total}</div>

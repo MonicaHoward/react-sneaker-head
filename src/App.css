@@ -10,6 +10,16 @@
 }
 /* SHOES CSS */
 .shoe-card {
-  border: 1px solid gray;
-  margin: 10px;
+  height: 10%;
+  /* border: 1px solid gray; */
+}
+.bg {
+  background: #fff;
+}
+.imgClass {
+  background: url(./components/shop/white-addidas.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 300px;
+  width: 300px;
 }
