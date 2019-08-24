@@ -20,19 +20,19 @@ class Shoe extends Component {
   render() {
     return (
       <div>
-        {/* <Col sm="3">
-          <Card body>
-            <CardTitle>Special Title Treatment</CardTitle>
-            <CardText>
-              With supporting text below as a natural lead-in to additional
-              content.
-            </CardText>
-            <Button>Add to Cart</Button>
-          </Card>
-        </Col> */}
-        <p onClick={this.click}>
+        {/* <Col sm="3"> */}
+        <Card body>
+          <CardTitle>{this.props.name}</CardTitle>
+
+          <Button onClick={this.click}>{this.props.price}</Button>
+        </Card>
+        {/* </Col> */}
+        {/* <p onClick={this.click}>
           {this.props.name} {this.props.price}
         </p>
+        <Button onClick={this.click} className="justify-content-end">
+          Add to Cart
+        </Button> */}
       </div>
     );
   }

@@ -9,6 +9,7 @@ import {
   CardTitle,
   CardText,
   CardDeck,
+  CardGroup,
   CardSubtitle,
   CardBody
 } from "reactstrap";
@@ -33,25 +34,29 @@ class Shoes extends Component {
     var inventory = this.props.items.map((item, i) => {
       return (
         <Col className="shoe-card" sm="3">
-          <Card className="imgClass">
+          {/* <Card className="imgClass">
             <CardBody>
               <CardTitle>
                 <strong>{item.style}</strong>
               </CardTitle>
 
-              {/* <CardFooter className="bg"> */}
-              <Button className="justify-content-end">Add to Cart</Button>
-              {/* </CardFooter> */}
+              <CardFooter className="bg">
+              <Button
+                onClick={this.props.click}
+                className="justify-content-end"
+              >
+                Add to Cart
+              </Button>
+              </CardFooter>
             </CardBody>
-          </Card>
-          {/* <Shoe
+          </Card> */}
+          <Shoe
             name={item.style}
             price={item.price}
             key={i}
             cartTotal={this.cartTotal}
             active={item.active}
           />
-          <Button color="secondary">secondary</Button> */}
         </Col>
       );
     });
