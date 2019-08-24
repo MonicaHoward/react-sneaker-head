@@ -8,6 +8,21 @@
 .logo {
   font-family: "Architects Daughter", cursive;
 }
+/* HEADER CSS */
+.header-bg {
+  background: url("http://amerigometal.com/wp-content/uploads/gray-gradient-9803.jpg");
+  height: 100vh;
+  width: 100vw;
+  text-align: center;
+}
+.featured-shoe {
+  padding-top: 6%;
+}
+.featured-title {
+  font-family: "Architects Daughter", cursive;
+  font-size: 4em;
+}
+
 /* SHOES CSS */
 .shoe-card {
   height: 10%;
