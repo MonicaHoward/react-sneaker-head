@@ -13,7 +13,6 @@ class App extends Component {
   render() {
     return (
       <div>
-        <MainNav />
         <Header />
         <StoreFront />
       </div>
