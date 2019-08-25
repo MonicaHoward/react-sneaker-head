@@ -16,13 +16,22 @@ class Header extends Component {
     return (
       <div className="header-bg">
         <MainNav />
-        <div className="row" />
-
-        <img
-          className="featured-shoe"
-          src={featuredShoe}
-          alt="black white red jay"
-        />
+        <div className="row">
+          <div className="col-md-6 header header-img">
+            <img
+              className="featured-shoe"
+              src={featuredShoe}
+              alt="black white red jay"
+            />
+          </div>
+          <div className="col-md-6 header header-text">
+            <h1>
+              HOT
+              <br />
+              DROPS
+            </h1>
+          </div>
+        </div>
       </div>
     );
   }
