@@ -21,11 +21,24 @@ class Shoe extends Component {
     return (
       <div>
         {/* <Col sm="3"> */}
-        <Card body>
+        <Card className="shoe-img">
           <CardTitle>{this.props.name}</CardTitle>
-
-          <Button onClick={this.click}>{this.props.price}</Button>
+          <img
+            className="shoe-img"
+            src={this.props.img}
+            alt="black white and gold kyrie irving air max shoe"
+          />
+          <Button
+            className="price-button"
+            color="primary"
+            size="lg"
+            block
+            onClick={this.click}
+          >
+            {this.props.price}
+          </Button>
         </Card>
+
         {/* </Col> */}
         {/* <p onClick={this.click}>
           {this.props.name} {this.props.price}

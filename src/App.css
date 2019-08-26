@@ -63,6 +63,11 @@
 }
 
 /* SHOES CSS */
+.shoes-title {
+  font-family: "Archivo Black", sans-serif;
+  margin: 5%;
+  text-align: center;
+}
 .shoe-card {
   height: 10%;
   /* border: 1px solid gray; */
@@ -77,4 +82,30 @@
   height: 300px;
   width: 300px;
   color: #fff;
+}
+.price-button {
+  border-radius: 0px;
+  border: none;
+  background: maroon;
+  color: #fff;
+}
+.price-button:hover {
+  border-radius: 0px;
+  border: none;
+  background: #4f0007;
+  color: #fff;
+}
+.shoe-img {
+  width: 100%;
+  border: none;
+}
+.total-box {
+  /* border: 1px solid gray; */
+  margin: 5%;
+  padding: 5%;
+  text-align: center;
+}
+.total {
+  font-family: "Archivo Black", sans-serif;
+  font-size: 2em;
 }

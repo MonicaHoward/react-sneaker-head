@@ -53,6 +53,7 @@ class Shoes extends Component {
           <Shoe
             name={item.style}
             price={item.price}
+            img={item.img}
             key={i}
             cartTotal={this.cartTotal}
             active={item.active}
@@ -62,14 +63,22 @@ class Shoes extends Component {
     });
     return (
       <div>
-        <h1>Shoes</h1>
+        <h1 className="shoes-title">New Releases</h1>
         <Container>
           <Row>
             <CardDeck>{inventory}</CardDeck>
           </Row>
         </Container>
-
-        <div>total:{this.state.total}</div>
+        <div className="container">
+          <div className="row total-box">
+            <div className="col-md-6">
+              <div>{this.state.name}</div>
+            </div>
+            <div className="col-md-6 ">
+              <div className="total">total: ${this.state.total}</div>
+            </div>
+          </div>
+        </div>
       </div>
     );
   }
